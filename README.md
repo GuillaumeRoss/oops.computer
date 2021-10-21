@@ -1,2 +1,0 @@
-# binaryfactory
-Binaryfactory Blog
