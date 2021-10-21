@@ -1,8 +1,8 @@
 ##########################################
 # Site Settings
 
-baseURL = "https://binaryfactory.ca/"
-title = "Binaryfactory"
+baseURL = "https://oops.computer/"
+title = "Oops.🖥"
 languageCode = "en"
 hasCJKLanguage = false
 # Copyright information (Markdown supported)
