@@ -1,2 +1,2 @@
-# oops.computer
-oops.computer blog
+# binaryfactory
+Binaryfactory Blog
