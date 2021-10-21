@@ -625,7 +625,7 @@ uglyURLs = false
     #       `mathjax` in post’s Front Matter
     #       has a higher priority than here
 
-    disableMathJaxMenu = false
+    disableMathJaxMenu = true
 
 
     ######################################
