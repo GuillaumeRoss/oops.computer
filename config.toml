@@ -1225,7 +1225,7 @@ uglyURLs = false
     ######################################
     # Minimal Footer
 
-    enableMinimalFooter = false
+    enableMinimalFooter = true
     enableVerticalBarStructure = false
     # Note: If you enable this, the
     #       categories or sections that
@@ -1254,11 +1254,11 @@ uglyURLs = false
     ######################################
     # Footer
 
-    enableFooter = true
+    enableFooter = false
 
-    displayFooter = true
+    displayFooter = false
 
-    displayFooterInHome = true
+    displayFooterInHome = false
 
     displayCopyleftSymbol = false
     displayCopyrightSymbol = true
