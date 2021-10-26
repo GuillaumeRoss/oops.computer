@@ -47,14 +47,7 @@ relativeURLs = false
 uglyURLs = false
 
 # URL structure
-[permalinks]
-    categories = "/categories/:slug/"
-    tags = "/tags/:slug/"
 
-# Taxonomies
-[taxonomies]
-    category = "categories"
-    tag = "tags"
 
 # Modified date
 [frontmatter]
@@ -814,14 +807,14 @@ uglyURLs = false
     displayExpiredDate = true
     expiredDateIcon = "calendar-times"
 
-    displayCategory = true
+    displayCategory = false
     categoryIcon = "folder"
     categoryDelimiter = "/"
 
-    displayWordCount = true
+    displayWordCount = false
     wordCountIcon = "pencil-alt"
 
-    displayReadingTime = true
+    displayReadingTime = false
     readingTimeIcon = "clock"
 
     displayBusuanziPagePV = false
