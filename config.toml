@@ -214,12 +214,6 @@ uglyURLs = false
         pre = "internal"
         post = "th"
     [[menu.main]]
-        url = "/tags/"
-        name = "Tags"
-        weight = 4
-        pre = "internal"
-        post = "tags"
-    [[menu.main]]
         url = "/about/"
         name = "About"
         weight = 5
@@ -993,7 +987,7 @@ uglyURLs = false
     # Body
     fontFamilyBody = "'IBM Plex Serif', serif"
     # Disable categories enableTagCloud
-    disableKinds = ["taxonomy", "taxonomyTerm", "term", "categories", "tags"]
+    # disableKinds = ["taxonomy", "taxonomyTerm", "term", "categories", "tags"]
 
     # Embed fonts link
     fontsLink = "https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Source+Code+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Comfortaa:wght@700&display=swap"
