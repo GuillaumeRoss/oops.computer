@@ -1412,3 +1412,31 @@ uglyURLs = false
     fofVideoMp4 = ""
     # Note: you can leave these two
     #       options empty("")
+
+[privacy]
+  [privacy.disqus]
+    disable = true
+
+  [privacy.googleAnalytics]
+    anonymizeIP = false
+    disable = true
+    respectDoNotTrack = false
+    useSessionStorage = false
+
+  [privacy.instagram]
+    disable = true
+    simple = false
+
+  [privacy.twitter]
+    disable = true
+    enableDNT = true
+    simple = false
+
+  [privacy.vimeo]
+    disable = true
+    enableDNT = true
+    simple = false
+
+  [privacy.youtube]
+    disable = true
+    privacyEnhanced = true
