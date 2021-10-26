@@ -1,4 +1,24 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title type="text">Oops.🖥</title><subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle><updated>2021-10-26T02:47:22+00:00</updated><id>https://oops.computer/</id><link rel="alternate" type="text/html" href="https://oops.computer/"/><link rel="self" type="application/atom+xml" href="https://oops.computer/atom.xml"/><author><name>Guillaume Ross</name><uri>https://oops.computer/</uri><email>guillaume@binaryfactory.ca</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><generator uri="https://gohugo.io/" version="0.85.0">Hugo</generator><entry><title type="text">First post</title><link rel="alternate" type="text/html" href="https://oops.computer/posts/first_post/"/><id>https://oops.computer/posts/first_post/</id><updated>2021-10-26T02:47:21+00:00</updated><published>2021-10-20T20:23:54-04:00</published><author><name>Guillaume Ross</name><uri>https://io-oi.me/</uri><email>guillaume@binaryfactory.ca</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Testing Hugo. Works! The preview should be about 42 character long.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title type="text">Oops.🖥</title><subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle><updated>2021-10-26T02:50:54+00:00</updated><id>https://oops.computer/</id><link rel="alternate" type="text/html" href="https://oops.computer/"/><link rel="self" type="application/atom+xml" href="https://oops.computer/atom.xml"/><author><name>Guillaume Ross</name><uri>https://oops.computer/</uri><email>guillaume@binaryfactory.ca</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><generator uri="https://gohugo.io/" version="0.85.0">Hugo</generator><entry><title type="text">Hello World</title><link rel="alternate" type="text/html" href="https://oops.computer/posts/hello-world/"/><id>https://oops.computer/posts/hello-world/</id><updated>2021-10-26T02:50:53+00:00</updated><published>2021-10-20T20:51:26-04:00</published><author><name>Guillaume Ross</name><uri>https://io-oi.me/</uri><email>guillaume@binaryfactory.ca</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Mermaid Test Flow graph TD; A--B; A--C; B--D; C--D; Gantt gantt title A Gantt Diagram dateFormat YYYY-MM-DD section Section A task :a1, 2014-01-01, 30d Another task :after a1 , 20d section Another Task in sec :2014-01-12 , 12d another task : 24d</summary><content type="html">&lt;h1 id="mermaid-test">Mermaid Test&lt;/h1>
+&lt;h2 id="flow">Flow&lt;/h2>
+&lt;div class="mermaid">
+graph TD;
+A-->B;
+A-->C;
+B-->D;
+C-->D;
+&lt;/div>
+&lt;h2 id="gantt">Gantt&lt;/h2>
+&lt;div class="mermaid">
+gantt
+title A Gantt Diagram
+dateFormat YYYY-MM-DD
+section Section
+A task :a1, 2014-01-01, 30d
+Another task :after a1 , 20d
+section Another
+Task in sec :2014-01-12 , 12d
+another task : 24d
+&lt;/div></content></entry><entry><title type="text">First post</title><link rel="alternate" type="text/html" href="https://oops.computer/posts/first_post/"/><id>https://oops.computer/posts/first_post/</id><updated>2021-10-26T02:50:53+00:00</updated><published>2021-10-20T20:23:54-04:00</published><author><name>Guillaume Ross</name><uri>https://io-oi.me/</uri><email>guillaume@binaryfactory.ca</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Testing Hugo. Works! The preview should be about 42 character long.
 Heading Smaller heading Third This is text bold italic</summary><content type="html">&lt;p>Testing Hugo. Works! The preview should be about 42 character long.&lt;/p>
 &lt;h1 id="heading">Heading&lt;/h1>
 &lt;h2 id="smaller-heading">Smaller heading&lt;/h2>
