@@ -235,7 +235,7 @@ uglyURLs = false
         post = "search"
     [[menu.main]]
         url = "/rss.xml"
-        name = "RSS Feed"
+        name = "RSS"
         weight = 9
 
 
