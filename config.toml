@@ -229,6 +229,15 @@ uglyURLs = false
         weight = 8
         identifier = "search"
         post = "search"
+        [[menu.main]]
+        weight = 8
+        identifier = "search"
+        post = "search"
+    [[menu.main]]
+        url = "/rss.xml"
+        name = "RSS Feed"
+        weight = 9
+
 
 
 
