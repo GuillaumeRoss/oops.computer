@@ -1,7 +1,7 @@
 ---
 title: "Buying your first domain"
 date: 2021-10-31T01:23:54-04:00
-draft: true
+draft: false
 tag: ["DNS, startup, domain, basics, week0"]
 categories: ["Secure Startup"]
 ---
