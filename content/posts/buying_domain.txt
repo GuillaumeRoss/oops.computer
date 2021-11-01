@@ -31,6 +31,7 @@ Once you’ve picked your domain, you need to buy it. If you’re a startup, you
 2. Buy the domain for multiple years. You want to be sure you have time to move to a more corporate type account by the time it gets renewed.
 3. Configure [domain privacy](https://en.wikipedia.org/wiki/Domain_privacy). While it looks shady for a company to hide details from [WHOIS](https://en.wikipedia.org/wiki/WHOIS), you don’t want to share your information until you have a real corporate address and email account.
 4. Configure the [Registrar Lock](https://www.icann.org/resources/pages/locked-2013-05-03-en). This will ensure your domain can’t easily be transferred to another registrar out of your control.
+5. Follow the same process to buy your domain names on other common TLDs (`.net`, `org`, your country's).
 
 
 ## Next Steps
