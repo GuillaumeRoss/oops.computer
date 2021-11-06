@@ -48,7 +48,8 @@ For a critical repository that allows modifying teams, users and repositories, i
 
 ```
 # Require review from Security Team for all changes
-* @yourorg/security```
+* @yourorg/security
+```
 
 
 ## Process
