@@ -117,6 +117,7 @@ First, ensure branch protection is enabled on at least your default branch.
 
 ![Enable branch protection on your default branch](./images/safer-github-setup/branch_protection_1.png)
 
+#### Branch Protection Settings
 | Setting                                                          | Value     | For    | Description                                                |
 | ---------------------------------------------------------------- | --------- | ------ | ---------------------------------------------------------- |
 | Require a pull request before merging                            | ✅        | 🍩  | Enforce code reviews                                       |
