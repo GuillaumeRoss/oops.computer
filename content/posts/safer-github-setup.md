@@ -60,7 +60,7 @@ id4--Accesses-->id3
 
 That way, your corporate GitHub notifications  are accessible on work email, and GitHub sessions themselves, with SAML.
 
-The main downside of leveraging SSO on GitHub is that the price jumps from $4 per user/month to **$21**. They're not going to give up their rankings on [sso.tax](https://sso.tax/) soon.
+The main downside of leveraging SSO on GitHub is that the price jumps from $4 per user/month to **$21**. They're not going to give up their ranking on [sso.tax](https://sso.tax/) soon.
 
 0. Go to the *Organization Security* settings page.
 1. Enable SSO ![Enable SSO to check ✅](./images/safer-github-setup/enablesso.png)
@@ -78,7 +78,7 @@ Make sure two people are able to get to owner privileges, but no more. As you in
 ## Repositories
 Repositories are the main reason organizations use GitHub. If you're not going to create them, why bother?
 
-There are many ways to ensure the security of repositories and the code they contain. This requires controlling who is able to create and configure the repositories, then, to have a standard configuration applied to them.
+There are many ways to protect repositories and the code they contain. This requires controlling who is able to create and configure the repositories, then, to have a standard configuration applied to them.
 
 ### Member Repository Permissions 🌯
 
