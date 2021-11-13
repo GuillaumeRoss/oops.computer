@@ -201,4 +201,4 @@ Keep in mind that this feature exists, especially if you start thinking of ways 
 
 ## Automating this - 🌶
 
-See [automation](./github_automation/)!
+See [automation](../github_automation/)!
