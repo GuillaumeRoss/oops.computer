@@ -55,7 +55,6 @@ id1--Logs In with Account-->id2
 id2-->Accesses-->id7
 id2--Links to work account-->id4
 id4--Accesses-->id3
-{{</mermaid>}}
 </div>
 
 That way, your corporate GitHub notifications  are accessible on work email, and GitHub sessions themselves, with SAML.
