@@ -62,11 +62,11 @@ That way, your corporate GitHub notifications  are accessible on work email, and
 The main downside of leveraging SSO on GitHub is that the price jumps from $4 per user/month to **$21**. They're not going to give up their ranking on [sso.tax](https://sso.tax/) soon.
 
 0. Go to the *Organization Security* settings page.
-1. Enable SSO ![Enable SSO to check ✅](./images/safer-github-setup/enablesso.png)
-2. Require SSO ![Require SSO to check ✅](./images/safer-github-setup/requiresso.png)
+1. Enable SSO ![Enable SSO to check ✅](../images/safer-github-setup/enablesso.png)
+2. Require SSO ![Require SSO to check ✅](../images/safer-github-setup/requiresso.png)
 3. Go to the *Verified & approved domains* settings page
 4. Verify your domain(s)
-5. Require that email notifications only be sent to approved or verified domains. ![Restrict email notifications check ✅](./images/safer-github-setup/restrictemail.png)
+5. Require that email notifications only be sent to approved or verified domains. ![Restrict email notifications check ✅](../images/safer-github-setup/restrictemail.png)
 
 ### Administrator/Owner Privileges 🌯
 
@@ -87,7 +87,7 @@ To keep control on the configuration of repositories, you must ensure GitHub own
 
 Under *‌Member repository permissions*, make sure you uncheck permissions for the creation of public and private repositories.
 
-![Repo creation permissions to uncheck!](./images/safer-github-setup/repo_creation.png)
+![Repo creation permissions to uncheck!](../images/safer-github-setup/repo_creation.png)
 
 > But what if I need people to be able to create repositories? I don't want to slow them down!
 
@@ -96,13 +96,13 @@ That's what [automation](github_automation.md) is for!
 ### Repository forking 🍩 
 By default, ensure public repositories are the only one that can be forked, by disabling this feature.
 
-![Repo forking to uncheck!](./images/safer-github-setup/repo_forking.png)
+![Repo forking to uncheck!](../images/safer-github-setup/repo_forking.png)
 
 ### Repository Outside collaborators 🌯
 
 If you are using SAML, and are using that to enforce specific requirements on systems connecting to GitHub, you may want to enforce that outside collaborators not be allowed. Instead, invite consultants as regular users, but give them an account on your identity provider.
 
-![Outside collaborators to uncheck!](./images/safer-github-setup/outside_collaborators.png)
+![Outside collaborators to uncheck!](../images/safer-github-setup/outside_collaborators.png)
 
 If you must collaborate with a lot of external consultants, and you do not apply specific security requirements to connecting to GitHub, then leaving this setting enabled makes sense.
 
@@ -114,7 +114,7 @@ Located in the **Branches** section of repository settings, you must create bran
 
 First, ensure branch protection is enabled on at least your default branch.
 
-![Enable branch protection on your default branch](./images/safer-github-setup/branch_protection_1.png)
+![Enable branch protection on your default branch](../images/safer-github-setup/branch_protection_1.png)
 
 #### Branch Protection Settings
 | Setting                                                          | Value     | For    | Description                                                |
@@ -136,7 +136,7 @@ Other values should be configured based on your use cases.
 
 Ensure that regular members do not have the ability to create public pages, but can create private ones. This can prevent the accidental publishing of internal documentation.
 
-![Public pages to uncheck!](./images/safer-github-setup/pages.png)
+![Public pages to uncheck!](../images/safer-github-setup/pages.png)
 
 ### Admin Repository Permissions 
 These permissions apply to members that have admin privileges on repositories.
@@ -152,19 +152,19 @@ Visibility would allow a member to make a repository public, which could result 
 
 Deletion and transfer can also be dangerous, as an attacker might attempt to take control of repositories, in exchange for a ransom for example. 
 
-![Visibility change and repo deletion and transfer to uncheck!](./images/safer-github-setup/visibility_and_deletion.png)
+![Visibility change and repo deletion and transfer to uncheck!](../images/safer-github-setup/visibility_and_deletion.png)
 
 
 #### Member team permissions 🌯
 Disable this to prevent members from creating teams, which should be managed through [automation](github_automation.md).
 
-![Team creation permission to uncheck!](./images/safer-github-setup/team_creation.png)
+![Team creation permission to uncheck!](../images/safer-github-setup/team_creation.png)
 
 #### Member organization permissions 🍩 
 
 Enable this to ensure everyone contributing on your repositories has access to security advisories related to dependencies of the code.
 
-![Dependency insight to check ✅!](./images/safer-github-setup/dependency_insight.png)
+![Dependency insight to check ✅!](../images/safer-github-setup/dependency_insight.png)
 
 
 ## Security & Analysis 🍩 
@@ -174,7 +174,7 @@ I recommend that you simply enable all of them by default.
 
 **There is no API for configuring these during repository creation, making the configuration of the defaults even more iportant**.
 
-![Security & Analysis - check'em all! ✅✅✅!](./images/safer-github-setup/security_analysis.png)
+![Security & Analysis - check'em all! ✅✅✅!](../images/safer-github-setup/security_analysis.png)
 
 ## Actions 🌯 to 🌶
 GitHub actions lets you build workflows directly in GitHub. It can be used as a full-fledged CI/CD, or for simpler tasks.
@@ -186,7 +186,7 @@ If you do use actions, and require a high level of security, allow specific acti
 
 If you are in the middle, allow actions that are made by GitHub directly, as well as from [verified creators](https://github.com/marketplace?type=actions&verification=verified_creator).
 
-![No one-size-fits-all for Actions](./images/safer-github-setup/actions.png)
+![No one-size-fits-all for Actions](../images/safer-github-setup/actions.png)
 
 ## Codespaces
 
