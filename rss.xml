@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Oops.🖥</title><link>https://oops.computer/</link><description>MemE is a powerful and highly customizable GoHugo theme for personal blogs.</description><generator>Hugo 0.85.0 https://gohugo.io/</generator><language>en</language><managingEditor>guillaume@binaryfactory.ca (Guillaume Ross)</managingEditor><webMaster>guillaume@binaryfactory.ca (Guillaume Ross)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Sat, 13 Nov 2021 18:30:26 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://oops.computer/rss.xml"/><item><title>Automating GitHub</title><link>https://oops.computer/posts/github_automation/</link><guid isPermaLink="true">https://oops.computer/posts/github_automation/</guid><pubDate>Sat, 13 Nov 2021 13:23:54 -0400</pubDate><author>guillaume@binaryfactory.ca (Guillaume Ross)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description>&lt;p>In &lt;a href="safer-github-setup.md">Safer GitHub Setup&lt;/a>, we restricted access to multiple operations in GitHub:&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Oops.🖥</title><link>https://oops.computer/</link><description>MemE is a powerful and highly customizable GoHugo theme for personal blogs.</description><generator>Hugo 0.85.0 https://gohugo.io/</generator><language>en</language><managingEditor>guillaume@binaryfactory.ca (Guillaume Ross)</managingEditor><webMaster>guillaume@binaryfactory.ca (Guillaume Ross)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Sat, 13 Nov 2021 18:34:11 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://oops.computer/rss.xml"/><item><title>Automating GitHub</title><link>https://oops.computer/posts/github_automation/</link><guid isPermaLink="true">https://oops.computer/posts/github_automation/</guid><pubDate>Sat, 13 Nov 2021 13:23:54 -0400</pubDate><author>guillaume@binaryfactory.ca (Guillaume Ross)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description>&lt;p>In &lt;a href="safer-github-setup.md">Safer GitHub Setup&lt;/a>, we restricted access to multiple operations in GitHub:&lt;/p>
 &lt;ul>
 &lt;li>Creating users can be done by owners, and we have few of those.&lt;/li>
 &lt;li>Managing teams also requires owners privileges.&lt;/li>
@@ -126,11 +126,11 @@ id4--Accesses-->id3
 &lt;p>The main downside of leveraging SSO on GitHub is that the price jumps from $4 per user/month to &lt;strong>$21&lt;/strong>. They&amp;rsquo;re not going to give up their ranking on &lt;a href="https://sso.tax/">sso.tax&lt;/a> soon.&lt;/p>
 &lt;ol start="0">
 &lt;li>Go to the &lt;em>Organization Security&lt;/em> settings page.&lt;/li>
-&lt;li>Enable SSO &lt;img src="./images/safer-github-setup/enablesso.png" alt="Enable SSO to check ✅">&lt;/li>
-&lt;li>Require SSO &lt;img src="./images/safer-github-setup/requiresso.png" alt="Require SSO to check ✅">&lt;/li>
+&lt;li>Enable SSO &lt;img src="../images/safer-github-setup/enablesso.png" alt="Enable SSO to check ✅">&lt;/li>
+&lt;li>Require SSO &lt;img src="../images/safer-github-setup/requiresso.png" alt="Require SSO to check ✅">&lt;/li>
 &lt;li>Go to the &lt;em>Verified &amp;amp; approved domains&lt;/em> settings page&lt;/li>
 &lt;li>Verify your domain(s)&lt;/li>
-&lt;li>Require that email notifications only be sent to approved or verified domains. &lt;img src="./images/safer-github-setup/restrictemail.png" alt="Restrict email notifications check ✅">&lt;/li>
+&lt;li>Require that email notifications only be sent to approved or verified domains. &lt;img src="../images/safer-github-setup/restrictemail.png" alt="Restrict email notifications check ✅">&lt;/li>
 &lt;/ol>
 &lt;h3 id="administratorowner-privileges-">Administrator/Owner Privileges 🌯&lt;/h3>
 &lt;p>Keep administrator privileges to the absolute minimum. Keep in mind that anybody with owner privileges on your GitHub environment would be able to disable all the security controls discussed in this document - without being detected, unless you were using the &lt;a href="https://docs.github.com/en/organizations/keeping-your-organization-secure/reviewing-the-audit-log-for-your-organization">Audit API&lt;/a> with automated detection.&lt;/p>
@@ -142,23 +142,23 @@ id4--Accesses-->id3
 &lt;p>To keep control on the configuration of repositories, you must ensure GitHub owners are the only ones able to create them.&lt;/p>
 &lt;h3 id="repository-creation-">Repository Creation 🌯&lt;/h3>
 &lt;p>Under &lt;em>‌Member repository permissions&lt;/em>, make sure you uncheck permissions for the creation of public and private repositories.&lt;/p>
-&lt;p>&lt;img src="./images/safer-github-setup/repo_creation.png" alt="Repo creation permissions to uncheck!">&lt;/p>
+&lt;p>&lt;img src="../images/safer-github-setup/repo_creation.png" alt="Repo creation permissions to uncheck!">&lt;/p>
 &lt;blockquote>
 &lt;p>But what if I need people to be able to create repositories? I don&amp;rsquo;t want to slow them down!&lt;/p>
 &lt;/blockquote>
 &lt;p>That&amp;rsquo;s what &lt;a href="github_automation.md">automation&lt;/a> is for!&lt;/p>
 &lt;h3 id="repository-forking-">Repository forking 🍩&lt;/h3>
 &lt;p>By default, ensure public repositories are the only one that can be forked, by disabling this feature.&lt;/p>
-&lt;p>&lt;img src="./images/safer-github-setup/repo_forking.png" alt="Repo forking to uncheck!">&lt;/p>
+&lt;p>&lt;img src="../images/safer-github-setup/repo_forking.png" alt="Repo forking to uncheck!">&lt;/p>
 &lt;h3 id="repository-outside-collaborators-">Repository Outside collaborators 🌯&lt;/h3>
 &lt;p>If you are using SAML, and are using that to enforce specific requirements on systems connecting to GitHub, you may want to enforce that outside collaborators not be allowed. Instead, invite consultants as regular users, but give them an account on your identity provider.&lt;/p>
-&lt;p>&lt;img src="./images/safer-github-setup/outside_collaborators.png" alt="Outside collaborators to uncheck!">&lt;/p>
+&lt;p>&lt;img src="../images/safer-github-setup/outside_collaborators.png" alt="Outside collaborators to uncheck!">&lt;/p>
 &lt;p>If you must collaborate with a lot of external consultants, and you do not apply specific security requirements to connecting to GitHub, then leaving this setting enabled makes sense.&lt;/p>
 &lt;h3 id="branch-protection-">Branch Protection 🍩&lt;/h3>
 &lt;p>Branch protection is one of the most important settings to configure, and the main reason you should not have members with administrative privileges on the repositories.&lt;/p>
 &lt;p>Located in the &lt;strong>Branches&lt;/strong> section of repository settings, you must create branch.&lt;/p>
 &lt;p>First, ensure branch protection is enabled on at least your default branch.&lt;/p>
-&lt;p>&lt;img src="./images/safer-github-setup/branch_protection_1.png" alt="Enable branch protection on your default branch">&lt;/p>
+&lt;p>&lt;img src="../images/safer-github-setup/branch_protection_1.png" alt="Enable branch protection on your default branch">&lt;/p>
 &lt;h4 id="branch-protection-settings">Branch Protection Settings&lt;/h4>
 &lt;table>
 &lt;thead>
@@ -230,7 +230,7 @@ id4--Accesses-->id3
 &lt;h2 id="other-settings">Other Settings&lt;/h2>
 &lt;h3 id="pages-">Pages 🌯&lt;/h3>
 &lt;p>Ensure that regular members do not have the ability to create public pages, but can create private ones. This can prevent the accidental publishing of internal documentation.&lt;/p>
-&lt;p>&lt;img src="./images/safer-github-setup/pages.png" alt="Public pages to uncheck!">&lt;/p>
+&lt;p>&lt;img src="../images/safer-github-setup/pages.png" alt="Public pages to uncheck!">&lt;/p>
 &lt;h3 id="admin-repository-permissions">Admin Repository Permissions&lt;/h3>
 &lt;p>These permissions apply to members that have admin privileges on repositories.&lt;/p>
 &lt;p>It is important to limit admin privileges on repositories. These privileges are simply too high to grant to multiple people, as they allow disabling security features such as branch protection. Therefore, it is important to strive for repositories without administrators, except for service accounts used for &lt;a href="github_automation.md">automation&lt;/a>.&lt;/p>
@@ -238,25 +238,25 @@ id4--Accesses-->id3
 &lt;h4 id="repository-visibility-deletion-and-transfer-">Repository visibility, deletion and transfer 🌯&lt;/h4>
 &lt;p>Visibility would allow a member to make a repository public, which could result in accidental or at least, unexpected public publishing of internal repositories.&lt;/p>
 &lt;p>Deletion and transfer can also be dangerous, as an attacker might attempt to take control of repositories, in exchange for a ransom for example.&lt;/p>
-&lt;p>&lt;img src="./images/safer-github-setup/visibility_and_deletion.png" alt="Visibility change and repo deletion and transfer to uncheck!">&lt;/p>
+&lt;p>&lt;img src="../images/safer-github-setup/visibility_and_deletion.png" alt="Visibility change and repo deletion and transfer to uncheck!">&lt;/p>
 &lt;h4 id="member-team-permissions-">Member team permissions 🌯&lt;/h4>
 &lt;p>Disable this to prevent members from creating teams, which should be managed through &lt;a href="github_automation.md">automation&lt;/a>.&lt;/p>
-&lt;p>&lt;img src="./images/safer-github-setup/team_creation.png" alt="Team creation permission to uncheck!">&lt;/p>
+&lt;p>&lt;img src="../images/safer-github-setup/team_creation.png" alt="Team creation permission to uncheck!">&lt;/p>
 &lt;h4 id="member-organization-permissions-">Member organization permissions 🍩&lt;/h4>
 &lt;p>Enable this to ensure everyone contributing on your repositories has access to security advisories related to dependencies of the code.&lt;/p>
-&lt;p>&lt;img src="./images/safer-github-setup/dependency_insight.png" alt="Dependency insight to check ✅!">&lt;/p>
+&lt;p>&lt;img src="../images/safer-github-setup/dependency_insight.png" alt="Dependency insight to check ✅!">&lt;/p>
 &lt;h2 id="security--analysis-">Security &amp;amp; Analysis 🍩&lt;/h2>
 &lt;p>Depending on your GitHub subscription level, and on your repositories being public or private, you will have access to various security and analysis tools.&lt;/p>
 &lt;p>I recommend that you simply enable all of them by default.&lt;/p>
 &lt;p>&lt;strong>There is no API for configuring these during repository creation, making the configuration of the defaults even more iportant&lt;/strong>.&lt;/p>
-&lt;p>&lt;img src="./images/safer-github-setup/security_analysis.png" alt="Security &amp; Analysis - check&amp;rsquo;em all! ✅✅✅!">&lt;/p>
+&lt;p>&lt;img src="../images/safer-github-setup/security_analysis.png" alt="Security &amp; Analysis - check&amp;rsquo;em all! ✅✅✅!">&lt;/p>
 &lt;h2 id="actions--to-">Actions 🌯 to 🌶&lt;/h2>
 &lt;p>GitHub actions lets you build workflows directly in GitHub. It can be used as a full-fledged CI/CD, or for simpler tasks.&lt;/p>
 &lt;p>Actions, by definitions, are code that is executed with permission to interact with repositories.&lt;/p>
 &lt;p>If you do not use actions: block them all for now.
 If you do use actions, and require a high level of security, allow specific actions only.&lt;/p>
 &lt;p>If you are in the middle, allow actions that are made by GitHub directly, as well as from &lt;a href="https://github.com/marketplace?type=actions&amp;amp;verification=verified_creator">verified creators&lt;/a>.&lt;/p>
-&lt;p>&lt;img src="./images/safer-github-setup/actions.png" alt="No one-size-fits-all for Actions">&lt;/p>
+&lt;p>&lt;img src="../images/safer-github-setup/actions.png" alt="No one-size-fits-all for Actions">&lt;/p>
 &lt;h2 id="codespaces">Codespaces&lt;/h2>
 &lt;p>&lt;a href="https://github.com/features/codespaces">Codespaces&lt;/a> is essentially ML-powered autocomplete for developers. Its name is also real close to the &lt;a href="https://www.csoonline.com/article/2365062/code-spaces-forced-to-close-its-doors-after-security-incident.html">name of a company that closed after getting wrecked by an attack&lt;/a>, but it is completely unrelated.&lt;/p>
 &lt;p>It is essentially a development environment in the cloud for your developers, available through a browser or the desktop version of Visual Studio Code.&lt;/p>
