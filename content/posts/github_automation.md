@@ -7,7 +7,7 @@ categories: ["Secure Startup"]
 
 ---
 
-In [Safer GitHub Setup](safer-github-setup.md), we restricted access to multiple operations in GitHub:
+In [Safer GitHub Setup](../safer-github-setup/), we restricted access to multiple operations in GitHub:
 
 * Creating users can be done by owners, and we have few of those.
 * Managing teams also requires owners privileges.
