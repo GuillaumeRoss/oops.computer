@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Oops.🖥</title><link>https://oops.computer/</link><description>MemE is a powerful and highly customizable GoHugo theme for personal blogs.</description><generator>Hugo 0.85.0 https://gohugo.io/</generator><language>en</language><managingEditor>guillaume@binaryfactory.ca (Guillaume Ross)</managingEditor><webMaster>guillaume@binaryfactory.ca (Guillaume Ross)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Sat, 13 Nov 2021 18:34:42 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://oops.computer/rss.xml"/><item><title>Automating GitHub</title><link>https://oops.computer/posts/github_automation/</link><guid isPermaLink="true">https://oops.computer/posts/github_automation/</guid><pubDate>Sat, 13 Nov 2021 13:23:54 -0400</pubDate><author>guillaume@binaryfactory.ca (Guillaume Ross)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description>&lt;p>In &lt;a href="safer-github-setup.md">Safer GitHub Setup&lt;/a>, we restricted access to multiple operations in GitHub:&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Oops.🖥</title><link>https://oops.computer/</link><description>MemE is a powerful and highly customizable GoHugo theme for personal blogs.</description><generator>Hugo 0.85.0 https://gohugo.io/</generator><language>en</language><managingEditor>guillaume@binaryfactory.ca (Guillaume Ross)</managingEditor><webMaster>guillaume@binaryfactory.ca (Guillaume Ross)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Sat, 13 Nov 2021 18:48:59 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://oops.computer/rss.xml"/><item><title>Automating GitHub</title><link>https://oops.computer/posts/github_automation/</link><guid isPermaLink="true">https://oops.computer/posts/github_automation/</guid><pubDate>Sat, 13 Nov 2021 13:23:54 -0400</pubDate><author>guillaume@binaryfactory.ca (Guillaume Ross)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description>&lt;p>In &lt;a href="safer-github-setup.md">Safer GitHub Setup&lt;/a>, we restricted access to multiple operations in GitHub:&lt;/p>
 &lt;ul>
 &lt;li>Creating users can be done by owners, and we have few of those.&lt;/li>
 &lt;li>Managing teams also requires owners privileges.&lt;/li>
@@ -66,7 +66,7 @@ id7-->id9
 id7-->id10-->id12
 &lt;/div></description><category domain="https://oops.computer/categories/secure-startup/">Secure Startup</category></item><item><title>Safer GitHub Setup</title><link>https://oops.computer/posts/safer-github-setup/</link><guid isPermaLink="true">https://oops.computer/posts/safer-github-setup/</guid><pubDate>Sat, 13 Nov 2021 13:21:54 -0400</pubDate><author>guillaume@binaryfactory.ca (Guillaume Ross)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description>&lt;p>As a tech company, you&amp;rsquo;re going to need to host and version control your source code. Unless you&amp;rsquo;re super weird (or have crazy requirements), you&amp;rsquo;re likely to use a SaaS platform such as GitHub to do so.&lt;/p>
 &lt;p>This article covers the main controls to implement on GitHub - but you&amp;rsquo;ll find that most of these have equivalents on platforms such as &lt;a href="https://about.gitlab.com/">GitLab&lt;/a> or &lt;a href="https://bitbucket.org/product">BitBucket&lt;/a>.&lt;/p>
-&lt;p>This guide is meant for companies new to using GitHub, but the recommendations can be used for any organization using it.&lt;/p>
+&lt;p>This guide is meant for companies new to using GitHub, but the recommendations can be used by any organization using it.&lt;/p>
 &lt;h3 id="legend">Legend&lt;/h3>
 &lt;table>
 &lt;thead>
@@ -117,13 +117,14 @@ id6(Work email)
 id7(Personal Projects)
 id3--notification-->id6
 id7--notification-->id5
-id1--Logs In with Account-->id2
+id1--Logs In-->id2
 id2-->Accesses-->id7
-id2--Links to work account-->id4
+id2--Links to work org-->id4
 id4--Accesses-->id3
 &lt;/div>
 &lt;p>That way, your corporate GitHub notifications are accessible on work email, and GitHub sessions themselves, with SAML.&lt;/p>
-&lt;p>The main downside of leveraging SSO on GitHub is that the price jumps from $4 per user/month to &lt;strong>$21&lt;/strong>. They&amp;rsquo;re not going to give up their ranking on &lt;a href="https://sso.tax/">sso.tax&lt;/a> soon.&lt;/p>
+&lt;p>The main downside of leveraging SSO on GitHub is that the price jumps from $4 per user/month to &lt;strong>$21&lt;/strong>.&lt;/p>
+&lt;p>They&amp;rsquo;re not going to give up their ranking on &lt;a href="https://sso.tax/">sso.tax&lt;/a> soon.&lt;/p>
 &lt;ol start="0">
 &lt;li>Go to the &lt;em>Organization Security&lt;/em> settings page.&lt;/li>
 &lt;li>Enable SSO &lt;img src="../images/safer-github-setup/enablesso.png" alt="Enable SSO to check ✅">&lt;/li>
@@ -146,7 +147,7 @@ id4--Accesses-->id3
 &lt;blockquote>
 &lt;p>But what if I need people to be able to create repositories? I don&amp;rsquo;t want to slow them down!&lt;/p>
 &lt;/blockquote>
-&lt;p>That&amp;rsquo;s what &lt;a href="github_automation.md">automation&lt;/a> is for!&lt;/p>
+&lt;p>That&amp;rsquo;s what &lt;a href="./github_automation/">automation&lt;/a> is for!&lt;/p>
 &lt;h3 id="repository-forking-">Repository forking 🍩&lt;/h3>
 &lt;p>By default, ensure public repositories are the only one that can be forked, by disabling this feature.&lt;/p>
 &lt;p>&lt;img src="../images/safer-github-setup/repo_forking.png" alt="Repo forking to uncheck!">&lt;/p>
@@ -233,14 +234,14 @@ id4--Accesses-->id3
 &lt;p>&lt;img src="../images/safer-github-setup/pages.png" alt="Public pages to uncheck!">&lt;/p>
 &lt;h3 id="admin-repository-permissions">Admin Repository Permissions&lt;/h3>
 &lt;p>These permissions apply to members that have admin privileges on repositories.&lt;/p>
-&lt;p>It is important to limit admin privileges on repositories. These privileges are simply too high to grant to multiple people, as they allow disabling security features such as branch protection. Therefore, it is important to strive for repositories without administrators, except for service accounts used for &lt;a href="github_automation.md">automation&lt;/a>.&lt;/p>
+&lt;p>It is important to limit admin privileges on repositories. These privileges are simply too high to grant to multiple people, as they allow disabling security features such as branch protection. Therefore, it is important to strive for repositories without administrators, except for service accounts used for &lt;a href="./github_automation/">automation&lt;/a>.&lt;/p>
 &lt;p>That being said, these automation accounts might be attacked, and so, it is useful to limit the privileges being made available to those accounts.&lt;/p>
 &lt;h4 id="repository-visibility-deletion-and-transfer-">Repository visibility, deletion and transfer 🌯&lt;/h4>
 &lt;p>Visibility would allow a member to make a repository public, which could result in accidental or at least, unexpected public publishing of internal repositories.&lt;/p>
 &lt;p>Deletion and transfer can also be dangerous, as an attacker might attempt to take control of repositories, in exchange for a ransom for example.&lt;/p>
 &lt;p>&lt;img src="../images/safer-github-setup/visibility_and_deletion.png" alt="Visibility change and repo deletion and transfer to uncheck!">&lt;/p>
 &lt;h4 id="member-team-permissions-">Member team permissions 🌯&lt;/h4>
-&lt;p>Disable this to prevent members from creating teams, which should be managed through &lt;a href="github_automation.md">automation&lt;/a>.&lt;/p>
+&lt;p>Disable this to prevent members from creating teams, which should be managed through &lt;a href="./github_automation/">automation&lt;/a>.&lt;/p>
 &lt;p>&lt;img src="../images/safer-github-setup/team_creation.png" alt="Team creation permission to uncheck!">&lt;/p>
 &lt;h4 id="member-organization-permissions-">Member organization permissions 🍩&lt;/h4>
 &lt;p>Enable this to ensure everyone contributing on your repositories has access to security advisories related to dependencies of the code.&lt;/p>
@@ -250,19 +251,19 @@ id4--Accesses-->id3
 &lt;p>I recommend that you simply enable all of them by default.&lt;/p>
 &lt;p>&lt;strong>There is no API for configuring these during repository creation, making the configuration of the defaults even more iportant&lt;/strong>.&lt;/p>
 &lt;p>&lt;img src="../images/safer-github-setup/security_analysis.png" alt="Security &amp; Analysis - check&amp;rsquo;em all! ✅✅✅!">&lt;/p>
-&lt;h2 id="actions--to-">Actions 🌯 to 🌶&lt;/h2>
-&lt;p>GitHub actions lets you build workflows directly in GitHub. It can be used as a full-fledged CI/CD, or for simpler tasks.&lt;/p>
+&lt;h2 id="actions-----to-">Actions - 🌯 to 🌶&lt;/h2>
+&lt;p>GitHub Actions lets you build workflows directly in GitHub. It can be used as a full-fledged CI/CD, or for simpler tasks.&lt;/p>
 &lt;p>Actions, by definitions, are code that is executed with permission to interact with repositories.&lt;/p>
-&lt;p>If you do not use actions: block them all for now.
-If you do use actions, and require a high level of security, allow specific actions only.&lt;/p>
-&lt;p>If you are in the middle, allow actions that are made by GitHub directly, as well as from &lt;a href="https://github.com/marketplace?type=actions&amp;amp;verification=verified_creator">verified creators&lt;/a>.&lt;/p>
-&lt;p>&lt;img src="../images/safer-github-setup/actions.png" alt="No one-size-fits-all for Actions">&lt;/p>
+&lt;p>If you do not use Actions: block them all for now.
+If you do use Actions, and require a high level of security, allow specific Actions only.&lt;/p>
+&lt;p>If you are in the middle, allow Actions that are made by GitHub directly, as well as from &lt;a href="https://github.com/marketplace?type=Actions&amp;amp;verification=verified_creator">verified creators&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="../images/safer-github-setup/Actions.png" alt="No one-size-fits-all for Actions">&lt;/p>
 &lt;h2 id="codespaces">Codespaces&lt;/h2>
-&lt;p>&lt;a href="https://github.com/features/codespaces">Codespaces&lt;/a> is essentially ML-powered autocomplete for developers. Its name is also real close to the &lt;a href="https://www.csoonline.com/article/2365062/code-spaces-forced-to-close-its-doors-after-security-incident.html">name of a company that closed after getting wrecked by an attack&lt;/a>, but it is completely unrelated.&lt;/p>
-&lt;p>It is essentially a development environment in the cloud for your developers, available through a browser or the desktop version of Visual Studio Code.&lt;/p>
-&lt;p>If you do not intend on using them, do not allow them, as they are relatively expensive. But keep in mind they exist, especially if you start thinking of ways to allow developers to work in standardized environments without having too much control on their actual computers.&lt;/p>
-&lt;h2 id="automating--this">Automating 🌶 this&lt;/h2>
-&lt;p>See &lt;a href="github_automation.md">automation&lt;/a>!&lt;/p></description><category domain="https://oops.computer/categories/secure-startup/">Secure Startup</category></item><item><title>Buying your first domain</title><link>https://oops.computer/posts/buying_domain/</link><guid isPermaLink="true">https://oops.computer/posts/buying_domain/</guid><pubDate>Mon, 01 Nov 2021 12:23:54 -0400</pubDate><author>guillaume@binaryfactory.ca (Guillaume Ross)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description>&lt;h1 id="tldr">TLDR&lt;/h1>
+&lt;p>&lt;a href="https://github.com/features/codespaces">Codespaces&lt;/a> is essentially a cloud based development environment powered by Visual Studio Code. Its name is also real close to the &lt;a href="https://www.csoonline.com/article/2365062/code-spaces-forced-to-close-its-doors-after-security-incident.html">name of a company that closed after getting wrecked by an attack&lt;/a>, but it is completely unrelated.&lt;/p>
+&lt;p>If you do not intend on using Codespaces, do not allow it, as the VMs it uses are relatively expensive.&lt;/p>
+&lt;p>Keep in mind that this feature exists, especially if you start thinking of ways to allow developers to work in standardized environments without having too much control on their actual computers.&lt;/p>
+&lt;h2 id="automating-this---">Automating this - 🌶&lt;/h2>
+&lt;p>See &lt;a href="./github_automation/">automation&lt;/a>!&lt;/p></description><category domain="https://oops.computer/categories/secure-startup/">Secure Startup</category></item><item><title>Buying your first domain</title><link>https://oops.computer/posts/buying_domain/</link><guid isPermaLink="true">https://oops.computer/posts/buying_domain/</guid><pubDate>Mon, 01 Nov 2021 12:23:54 -0400</pubDate><author>guillaume@binaryfactory.ca (Guillaume Ross)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description>&lt;h1 id="tldr">TLDR&lt;/h1>
 &lt;p>Buy a domain on a trusted top-level domain, using an email with multi-factor authentication (MFA). On the registrar and domain, enable MFA, turn on transfer lock and domain privacy on the domain until you get corporate mailing and email addresses.&lt;/p>
 &lt;h1 id="buying-your-first-domain">Buying your first domain&lt;/h1>
 &lt;p>As a brand new company, you&amp;rsquo;re going to need a domain name rapidly. This domain name will quickly be used for your website, email, and generic &amp;ldquo;proof of existence&amp;rdquo;.&lt;/p>
