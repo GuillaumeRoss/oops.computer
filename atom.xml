@@ -1,4 +1,71 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title type="text">Oops.🖥</title><subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle><updated>2021-11-01T17:24:47+00:00</updated><id>https://oops.computer/</id><link rel="alternate" type="text/html" href="https://oops.computer/"/><link rel="self" type="application/atom+xml" href="https://oops.computer/atom.xml"/><author><name>Guillaume Ross</name><uri>https://oops.computer/</uri><email>guillaume@binaryfactory.ca</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><generator uri="https://gohugo.io/" version="0.85.0">Hugo</generator><entry><title type="text">Buying your first domain</title><link rel="alternate" type="text/html" href="https://oops.computer/posts/buying_domain/"/><id>https://oops.computer/posts/buying_domain/</id><updated>2021-11-01T17:24:45+00:00</updated><published>2021-11-01T12:23:54-04:00</published><author><name>Guillaume Ross</name><uri>https://io-oi.me/</uri><email>guillaume@binaryfactory.ca</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">TLDR Buy a domain on a trusted top-level domain, using an email with multi-factor authentication (MFA). On the registrar and domain, enable MFA, turn on transfer lock and domain privacy on the domain until you get corporate mailing and email addresses.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><title type="text">Oops.🖥</title><subtitle type="html">MemE is a powerful and highly customizable GoHugo theme for personal blogs.</subtitle><updated>2021-11-13T18:25:59+00:00</updated><id>https://oops.computer/</id><link rel="alternate" type="text/html" href="https://oops.computer/"/><link rel="self" type="application/atom+xml" href="https://oops.computer/atom.xml"/><author><name>Guillaume Ross</name><uri>https://oops.computer/</uri><email>guillaume@binaryfactory.ca</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><generator uri="https://gohugo.io/" version="0.85.0">Hugo</generator><entry><title type="text">Automating</title><link rel="alternate" type="text/html" href="https://oops.computer/posts/github_automation/"/><id>https://oops.computer/posts/github_automation/</id><updated>2021-11-13T18:25:57+00:00</updated><published>2021-11-13T13:23:54-04:00</published><author><name>Guillaume Ross</name><uri>https://io-oi.me/</uri><email>guillaume@binaryfactory.ca</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">In Safer GitHub Setup, we restricted access to multiple operations in GitHub:
+Creating users can be done by owners, and we have few of those. Managing teams also requires owners privileges. Creating repositories is impossible for regular users. This is where the GitHub Terraform Provider comes in.</summary><content type="html">&lt;p>In &lt;a href="safer-github-setup.md">Safer GitHub Setup&lt;/a>, we restricted access to multiple operations in GitHub:&lt;/p>
+&lt;ul>
+&lt;li>Creating users can be done by owners, and we have few of those.&lt;/li>
+&lt;li>Managing teams also requires owners privileges.&lt;/li>
+&lt;li>Creating repositories is impossible for regular users.&lt;/li>
+&lt;/ul>
+&lt;p>This is where the &lt;a href="https://registry.terraform.io/providers/integrations/github/latest/docs">GitHub Terraform Provider&lt;/a> comes in.&lt;/p>
+&lt;p>Using this provider, you can:&lt;/p>
+&lt;ul>
+&lt;li>Create repositories
+&lt;ul>
+&lt;li>Configure branch protection on those repositories&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Invite users&lt;/li>
+&lt;li>Manage teams&lt;/li>
+&lt;li>And much more&amp;hellip;&lt;/li>
+&lt;/ul>
+&lt;p>By putting configuration files for this in a GitHub repo with the proper branch protection, now, everyone in your organization can invite new users, request changes to teams, and create repositories.&lt;/p>
+&lt;h2 id="service-account">Service Account&lt;/h2>
+&lt;p>Automation requires service accounts. GitHub does not have the concept of a &amp;ldquo;service&amp;rdquo; account. All users are worldwide, and should represent people.&lt;/p>
+&lt;p>To ensure your automation does not depend on a specific person, you must create a service account of some kind.&lt;/p>
+&lt;ol>
+&lt;li>Create an email address for this purpose on your email provider (&lt;em>github-automation@your_org.pancakes&lt;/em>)&lt;/li>
+&lt;li>Create a GitHub account for it. Save the password in a password manager.&lt;/li>
+&lt;li>If you are using Single Sign-On (SSO), and requiring it, grant permission to this account to log in to your organization via SAML.&lt;/li>
+&lt;li>Create a &lt;a href="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token">Personal Access Token (PAT)&lt;/a> for this service account.&lt;/li>
+&lt;li>Add an email address to the GitHub account that will go to a mailing list you will receive.&lt;/li>
+&lt;li>Disable SAML access and remove any email license you granted this service account. We don&amp;rsquo;t want it to be used interactively in the future anyway, so why pay for it to receive email?&lt;/li>
+&lt;/ol>
+&lt;h2 id="recommended-branch-protection">Recommended Branch Protection&lt;/h2>
+&lt;p>For a critical repository that allows modifying teams, users and repositories, it is important for someone in your security team, or any other team responsible for security , to approve the changes. Therefore, your GitHub configuration repository should:&lt;/p>
+&lt;ul>
+&lt;li>Require 2 code reviews&lt;/li>
+&lt;li>Have &lt;a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners">CODEOWNERs&lt;/a> configured&lt;/li>
+&lt;li>Have branch protection apply to administrators&lt;/li>
+&lt;li>Require commit signing&lt;/li>
+&lt;/ul>
+&lt;pre>&lt;code># Require review from Security Team for all changes
+* @yourorg/security
+&lt;/code>&lt;/pre>&lt;h2 id="process">Process&lt;/h2>
+&lt;div class="mermaid">
+graph LR;
+id1(User)
+id3[(github-config-repo/feature-branch)]
+id4[(github-config-repo/main)]
+id2{Is Approved?}
+id5(Build Pipeline)
+id6(Terraform)
+id7(GitHub APIs)
+id8(GitHub Users)
+id9(GitHub Teams)
+id10(GitHub Repositories)
+id11(Code Owners)
+id12(Branch Protection)
+id1--Changes Configuration-->id3
+id3--PR-->id11
+id11-->id2
+id2--No-->id1
+id2--Yes-->id4
+id4--Build Trigger-->id5
+id5--Runs-->id6
+id6--Executes and applies-->id7
+id7-->id8
+id7-->id9
+id7-->id10-->id12
+&lt;/div></content><category scheme="https://oops.computer/categories/secure-startup/" term="Secure Startup" label="Secure Startup"/></entry><entry><title type="text">Buying your first domain</title><link rel="alternate" type="text/html" href="https://oops.computer/posts/buying_domain/"/><id>https://oops.computer/posts/buying_domain/</id><updated>2021-11-13T18:25:57+00:00</updated><published>2021-11-01T12:23:54-04:00</published><author><name>Guillaume Ross</name><uri>https://io-oi.me/</uri><email>guillaume@binaryfactory.ca</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">TLDR Buy a domain on a trusted top-level domain, using an email with multi-factor authentication (MFA). On the registrar and domain, enable MFA, turn on transfer lock and domain privacy on the domain until you get corporate mailing and email addresses.
 Buying your first domain As a brand new company, you&amp;rsquo;re going to need a domain name rapidly.</summary><content type="html">&lt;h1 id="tldr">TLDR&lt;/h1>
 &lt;p>Buy a domain on a trusted top-level domain, using an email with multi-factor authentication (MFA). On the registrar and domain, enable MFA, turn on transfer lock and domain privacy on the domain until you get corporate mailing and email addresses.&lt;/p>
 &lt;h1 id="buying-your-first-domain">Buying your first domain&lt;/h1>
@@ -27,7 +94,206 @@ Buying your first domain As a brand new company, you&amp;rsquo;re going to need 
 &lt;li>No matter what, make sure that logging in to your registrar as well as any &amp;ldquo;recovery option&amp;rdquo; is configured to use company emails by this point, not personal ones.&lt;/li>
 &lt;li>Change the contact information on the domain to a generic group on your new corporate email environment, pointing to at least two people. You wouldn’t want an important notice related to your domain to be missed due to vacation.&lt;/li>
 &lt;li>Once you have a mailing address, disable domain privacy, as it looks suspicious for a company to be using that.&lt;/li>
-&lt;/ol></content><category scheme="https://oops.computer/categories/secure-startup/" term="Secure Startup" label="Secure Startup"/></entry><entry><title type="text">Simulating Ransomware with Ransomulator</title><link rel="alternate" type="text/html" href="https://oops.computer/posts/ransomulator/"/><id>https://oops.computer/posts/ransomulator/</id><updated>2021-11-01T17:24:45+00:00</updated><published>0001-01-01T00:00:00+00:00</published><author><name>Guillaume Ross</name><uri>https://io-oi.me/</uri><email>guillaume@binaryfactory.ca</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Ransomulator is a tool for BloodHound.
+&lt;/ol></content><category scheme="https://oops.computer/categories/secure-startup/" term="Secure Startup" label="Secure Startup"/></entry><entry><title type="text">Safer GitHub Setup</title><link rel="alternate" type="text/html" href="https://oops.computer/posts/safer-github-setup/"/><id>https://oops.computer/posts/safer-github-setup/</id><updated>2021-11-13T18:25:57+00:00</updated><published>0001-01-01T00:00:00+00:00</published><author><name>Guillaume Ross</name><uri>https://io-oi.me/</uri><email>guillaume@binaryfactory.ca</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">As a tech company, you&amp;rsquo;re going to need to host and version control your source code. Unless you&amp;rsquo;re super weird (or have crazy requirements), you&amp;rsquo;re likely to use a SaaS platform such as GitHub to do so.
+This article covers the main controls to implement on GitHub - but you&amp;rsquo;ll find that most of these have equivalents on platforms such as GitLab or BitBucket.</summary><content type="html">&lt;p>As a tech company, you&amp;rsquo;re going to need to host and version control your source code. Unless you&amp;rsquo;re super weird (or have crazy requirements), you&amp;rsquo;re likely to use a SaaS platform such as GitHub to do so.&lt;/p>
+&lt;p>This article covers the main controls to implement on GitHub - but you&amp;rsquo;ll find that most of these have equivalents on platforms such as &lt;a href="https://about.gitlab.com/">GitLab&lt;/a> or &lt;a href="https://bitbucket.org/product">BitBucket&lt;/a>.&lt;/p>
+&lt;p>This guide is meant for companies new to using GitHub, but the recommendations can be used for any organization using it.&lt;/p>
+&lt;h3 id="legend">Legend&lt;/h3>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Description&lt;/th>
+&lt;th>Label&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Everyone should do this&lt;/td>
+&lt;td>🍩&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Slight need for increased security&lt;/td>
+&lt;td>🌯&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>For those that will operate infra supporting systems that are critical&lt;/td>
+&lt;td>🌶&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Recommendations that require the Enterprise version&lt;/td>
+&lt;td>💰&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;h2 id="authentication">Authentication&lt;/h2>
+&lt;p>Authentication is the lynchpin of security on SaaS applications such as GitHub.&lt;/p>
+&lt;p>GitHub authentication differs to many SaaS products in one important way: accounts are global. Developers can and do carry their accounts from company to company and use them for open source projects.&lt;/p>
+&lt;h3 id="require-two-factor-authentication-for-everyone-in-the-organization-">Require two-factor authentication for everyone in the organization 🍩&lt;/h3>
+&lt;p>&lt;img src="./images/safer-github-setup/github_2fa.png" alt="2FA Checkbox to Check ✅">&lt;/p>
+&lt;p>The first thing you should do to your new GitHub organization is to enable two-factor authentication. Even if you plan to use Single Sign-On (SSO) with an identity provider that requires SSO, that will protect access to your organization, but 2FA is needed to protect the user account itself.&lt;/p>
+&lt;h3 id="single-sign-on-sso-">Single Sign-On (SSO) 🌯💰&lt;/h3>
+&lt;p>A question I hear frequently when companies are setting up their GitHub is&lt;/p>
+&lt;blockquote>
+&lt;p>Should we ask our employees to create new, work GitHub accounts?&lt;/p>
+&lt;/blockquote>
+&lt;p>The answer to that is almost always &lt;strong>no&lt;/strong>, due to a simple feature. If the goal is to make sure data does not get leaked to personal GitHub accounts, it is much easier to &lt;strong>use SSO authentication&lt;/strong> for access to the organization, and require an email &lt;strong>on your corporate domain&lt;/strong> for notifications related to your projects.&lt;/p>
+&lt;div class="mermaid">
+graph LR;
+id1(User)
+id2(GitHub)
+id3(Organization)
+id4(SAML)
+id5(Personal email)
+id6(Work email)
+id7(Personal Projects)
+id3--notification-->id6
+id7--notification-->id5
+id1--Logs In with Account-->id2
+id2-->Accesses-->id7
+id2--Links to work account-->id4
+id4--Accesses-->id3
+&lt;/div>
+&lt;p>That way, your corporate GitHub notifications are accessible on work email, and GitHub sessions themselves, with SAML.&lt;/p>
+&lt;p>The main downside of leveraging SSO on GitHub is that the price jumps from $4 per user/month to &lt;strong>$21&lt;/strong>. They&amp;rsquo;re not going to give up their ranking on &lt;a href="https://sso.tax/">sso.tax&lt;/a> soon.&lt;/p>
+&lt;ol start="0">
+&lt;li>Go to the &lt;em>Organization Security&lt;/em> settings page.&lt;/li>
+&lt;li>Enable SSO &lt;img src="./images/safer-github-setup/enablesso.png" alt="Enable SSO to check ✅">&lt;/li>
+&lt;li>Require SSO &lt;img src="./images/safer-github-setup/requiresso.png" alt="Require SSO to check ✅">&lt;/li>
+&lt;li>Go to the &lt;em>Verified &amp;amp; approved domains&lt;/em> settings page&lt;/li>
+&lt;li>Verify your domain(s)&lt;/li>
+&lt;li>Require that email notifications only be sent to approved or verified domains. &lt;img src="./images/safer-github-setup/restrictemail.png" alt="Restrict email notifications check ✅">&lt;/li>
+&lt;/ol>
+&lt;h3 id="administratorowner-privileges-">Administrator/Owner Privileges 🌯&lt;/h3>
+&lt;p>Keep administrator privileges to the absolute minimum. Keep in mind that anybody with owner privileges on your GitHub environment would be able to disable all the security controls discussed in this document - without being detected, unless you were using the &lt;a href="https://docs.github.com/en/organizations/keeping-your-organization-secure/reviewing-the-audit-log-for-your-organization">Audit API&lt;/a> with automated detection.&lt;/p>
+&lt;p>Make sure two people are able to get to owner privileges, but no more. As you increase your security and consider becoming compliant with various frameworks, you might even have to restrict that even more, by splitting passwords and 2FA credentials between different people.&lt;/p>
+&lt;h2 id="repositories">Repositories&lt;/h2>
+&lt;p>Repositories are the main reason organizations use GitHub. If you&amp;rsquo;re not going to create them, why bother?&lt;/p>
+&lt;p>There are many ways to protect repositories and the code they contain. This requires controlling who is able to create and configure the repositories, then, to have a standard configuration applied to them.&lt;/p>
+&lt;h3 id="member-repository-permissions-">Member Repository Permissions 🌯&lt;/h3>
+&lt;p>To keep control on the configuration of repositories, you must ensure GitHub owners are the only ones able to create them.&lt;/p>
+&lt;h3 id="repository-creation-">Repository Creation 🌯&lt;/h3>
+&lt;p>Under &lt;em>‌Member repository permissions&lt;/em>, make sure you uncheck permissions for the creation of public and private repositories.&lt;/p>
+&lt;p>&lt;img src="./images/safer-github-setup/repo_creation.png" alt="Repo creation permissions to uncheck!">&lt;/p>
+&lt;blockquote>
+&lt;p>But what if I need people to be able to create repositories? I don&amp;rsquo;t want to slow them down!&lt;/p>
+&lt;/blockquote>
+&lt;p>That&amp;rsquo;s what &lt;a href="github_automation.md">automation&lt;/a> is for!&lt;/p>
+&lt;h3 id="repository-forking-">Repository forking 🍩&lt;/h3>
+&lt;p>By default, ensure public repositories are the only one that can be forked, by disabling this feature.&lt;/p>
+&lt;p>&lt;img src="./images/safer-github-setup/repo_forking.png" alt="Repo forking to uncheck!">&lt;/p>
+&lt;h3 id="repository-outside-collaborators-">Repository Outside collaborators 🌯&lt;/h3>
+&lt;p>If you are using SAML, and are using that to enforce specific requirements on systems connecting to GitHub, you may want to enforce that outside collaborators not be allowed. Instead, invite consultants as regular users, but give them an account on your identity provider.&lt;/p>
+&lt;p>&lt;img src="./images/safer-github-setup/outside_collaborators.png" alt="Outside collaborators to uncheck!">&lt;/p>
+&lt;p>If you must collaborate with a lot of external consultants, and you do not apply specific security requirements to connecting to GitHub, then leaving this setting enabled makes sense.&lt;/p>
+&lt;h3 id="branch-protection-">Branch Protection 🍩&lt;/h3>
+&lt;p>Branch protection is one of the most important settings to configure, and the main reason you should not have members with administrative privileges on the repositories.&lt;/p>
+&lt;p>Located in the &lt;strong>Branches&lt;/strong> section of repository settings, you must create branch.&lt;/p>
+&lt;p>First, ensure branch protection is enabled on at least your default branch.&lt;/p>
+&lt;p>&lt;img src="./images/safer-github-setup/branch_protection_1.png" alt="Enable branch protection on your default branch">&lt;/p>
+&lt;h4 id="branch-protection-settings">Branch Protection Settings&lt;/h4>
+&lt;table>
+&lt;thead>
+&lt;tr>
+&lt;th>Setting&lt;/th>
+&lt;th>Value&lt;/th>
+&lt;th>For&lt;/th>
+&lt;th>Description&lt;/th>
+&lt;/tr>
+&lt;/thead>
+&lt;tbody>
+&lt;tr>
+&lt;td>Require a pull request before merging&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;td>🍩&lt;/td>
+&lt;td>Enforce code reviews&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Require approvals&lt;/td>
+&lt;td>1️⃣&lt;/td>
+&lt;td>🍩&lt;/td>
+&lt;td>Require at least 1 approval&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Require approvals&lt;/td>
+&lt;td>2️⃣&lt;/td>
+&lt;td>🌶&lt;/td>
+&lt;td>Require at least 2 approvals&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Dismiss stale pull request approvals when new commits are pushed&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;td>🍩&lt;/td>
+&lt;td>Invalidated existing approvals when changing code&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Require review from Code Owners&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;td>🍩&lt;/td>
+&lt;td>Require reviews from specific users or teams in CODEOWNERS&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Require signed commits&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;td>🌶&lt;/td>
+&lt;td>Require GPG signing of commits&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Include administrators&lt;/td>
+&lt;td>✅&lt;/td>
+&lt;td>🍩&lt;/td>
+&lt;td>Apply rule to repository administrators and GitHub owners&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Allow force pushes&lt;/td>
+&lt;td>⛔️&lt;/td>
+&lt;td>🍩&lt;/td>
+&lt;td>Self-explanatory&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td>Allow deletions&lt;/td>
+&lt;td>⛔️&lt;/td>
+&lt;td>🍩&lt;/td>
+&lt;td>Self-explanatory&lt;/td>
+&lt;/tr>
+&lt;/tbody>
+&lt;/table>
+&lt;p>Other values should be configured based on your use cases.&lt;/p>
+&lt;h2 id="other-settings">Other Settings&lt;/h2>
+&lt;h3 id="pages-">Pages 🌯&lt;/h3>
+&lt;p>Ensure that regular members do not have the ability to create public pages, but can create private ones. This can prevent the accidental publishing of internal documentation.&lt;/p>
+&lt;p>&lt;img src="./images/safer-github-setup/pages.png" alt="Public pages to uncheck!">&lt;/p>
+&lt;h3 id="admin-repository-permissions">Admin Repository Permissions&lt;/h3>
+&lt;p>These permissions apply to members that have admin privileges on repositories.&lt;/p>
+&lt;p>It is important to limit admin privileges on repositories. These privileges are simply too high to grant to multiple people, as they allow disabling security features such as branch protection. Therefore, it is important to strive for repositories without administrators, except for service accounts used for &lt;a href="github_automation.md">automation&lt;/a>.&lt;/p>
+&lt;p>That being said, these automation accounts might be attacked, and so, it is useful to limit the privileges being made available to those accounts.&lt;/p>
+&lt;h4 id="repository-visibility-deletion-and-transfer-">Repository visibility, deletion and transfer 🌯&lt;/h4>
+&lt;p>Visibility would allow a member to make a repository public, which could result in accidental or at least, unexpected public publishing of internal repositories.&lt;/p>
+&lt;p>Deletion and transfer can also be dangerous, as an attacker might attempt to take control of repositories, in exchange for a ransom for example.&lt;/p>
+&lt;p>&lt;img src="./images/safer-github-setup/visibility_and_deletion.png" alt="Visibility change and repo deletion and transfer to uncheck!">&lt;/p>
+&lt;h4 id="member-team-permissions-">Member team permissions 🌯&lt;/h4>
+&lt;p>Disable this to prevent members from creating teams, which should be managed through &lt;a href="github_automation.md">automation&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="./images/safer-github-setup/team_creation.png" alt="Team creation permission to uncheck!">&lt;/p>
+&lt;h4 id="member-organization-permissions-">Member organization permissions 🍩&lt;/h4>
+&lt;p>Enable this to ensure everyone contributing on your repositories has access to security advisories related to dependencies of the code.&lt;/p>
+&lt;p>&lt;img src="./images/safer-github-setup/dependency_insight.png" alt="Dependency insight to check ✅!">&lt;/p>
+&lt;h2 id="security--analysis-">Security &amp;amp; Analysis 🍩&lt;/h2>
+&lt;p>Depending on your GitHub subscription level, and on your repositories being public or private, you will have access to various security and analysis tools.&lt;/p>
+&lt;p>I recommend that you simply enable all of them by default.&lt;/p>
+&lt;p>&lt;strong>There is no API for configuring these during repository creation, making the configuration of the defaults even more iportant&lt;/strong>.&lt;/p>
+&lt;p>&lt;img src="./images/safer-github-setup/security_analysis.png" alt="Security &amp; Analysis - check&amp;rsquo;em all! ✅✅✅!">&lt;/p>
+&lt;h2 id="actions--to-">Actions 🌯 to 🌶&lt;/h2>
+&lt;p>GitHub actions lets you build workflows directly in GitHub. It can be used as a full-fledged CI/CD, or for simpler tasks.&lt;/p>
+&lt;p>Actions, by definitions, are code that is executed with permission to interact with repositories.&lt;/p>
+&lt;p>If you do not use actions: block them all for now.
+If you do use actions, and require a high level of security, allow specific actions only.&lt;/p>
+&lt;p>If you are in the middle, allow actions that are made by GitHub directly, as well as from &lt;a href="https://github.com/marketplace?type=actions&amp;amp;verification=verified_creator">verified creators&lt;/a>.&lt;/p>
+&lt;p>&lt;img src="./images/safer-github-setup/actions.png" alt="No one-size-fits-all for Actions">&lt;/p>
+&lt;h2 id="codespaces">Codespaces&lt;/h2>
+&lt;p>&lt;a href="https://github.com/features/codespaces">Codespaces&lt;/a> is essentially ML-powered autocomplete for developers. Its name is also real close to the &lt;a href="https://www.csoonline.com/article/2365062/code-spaces-forced-to-close-its-doors-after-security-incident.html">name of a company that closed after getting wrecked by an attack&lt;/a>, but it is completely unrelated.&lt;/p>
+&lt;p>It is essentially a development environment in the cloud for your developers, available through a browser or the desktop version of Visual Studio Code.&lt;/p>
+&lt;p>If you do not intend on using them, do not allow them, as they are relatively expensive. But keep in mind they exist, especially if you start thinking of ways to allow developers to work in standardized environments without having too much control on their actual computers.&lt;/p>
+&lt;h2 id="automating--this">Automating 🌶 this&lt;/h2>
+&lt;p>See &lt;a href="github_automation.md">automation&lt;/a>!&lt;/p></content><category scheme="https://oops.computer/categories/secure-startup/" term="Secure Startup" label="Secure Startup"/></entry><entry><title type="text">Simulating Ransomware with Ransomulator</title><link rel="alternate" type="text/html" href="https://oops.computer/posts/ransomulator/"/><id>https://oops.computer/posts/ransomulator/</id><updated>2021-11-13T18:25:57+00:00</updated><published>0001-01-01T00:00:00+00:00</published><author><name>Guillaume Ross</name><uri>https://io-oi.me/</uri><email>guillaume@binaryfactory.ca</email></author><rights>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</rights><summary type="html">Ransomulator is a tool for BloodHound.
 BloodHound is an open source tool that uses the power of graph databases to help attackers and defenders determine how their Active Directory environments could be compromised. Traditionally used by red teams, it’s a tool that blue teams should leverage extensively.</summary><content type="html">&lt;p>&lt;a href="https://github.com/zeronetworks/BloodHound-Tools/tree/main/Ransomulator">Ransomulator&lt;/a> is a tool for &lt;a href="https://github.com/BloodHoundAD/BloodHound">BloodHound&lt;/a>.&lt;/p>
 &lt;p>BloodHound is an open source tool that uses the power of graph databases to help attackers and defenders determine how their Active Directory environments could be compromised. Traditionally used by red teams, it’s a tool that blue teams should leverage extensively.&lt;/p>
 &lt;p>As BloodHound gathers information on computers, accounts, sessions and much more, it is an ideal tool to generate a simulated ransomware infection, quickly allowing you to understand how fast a compromised system could lead to all systems being compromised. &lt;a href="https://github.com/zeronetworks/BloodHound-Tools/tree/main/Ransomulator">Ransomulator&lt;/a> helps you do that more easily.&lt;/p>
