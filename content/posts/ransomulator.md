@@ -1,6 +1,6 @@
 ---
 title: "Simulating Ransomware with Ransomulator"
-date: 2021-11-31T13:23:54-04:00
+date: 2021-10-31T13:23:54-04:00
 draft: false
 tag: ["Active Directory, Ransomware, Lateral Movement", Bloodhound]
 categories: ["Links"]
