@@ -188,7 +188,7 @@ If you do use Actions, and require a high level of security, allow specific Acti
 
 If you are in the middle, allow Actions that are made by GitHub directly, as well as from [verified creators](https://github.com/marketplace?type=Actions&verification=verified_creator).
 
-![No one-size-fits-all for Actions](../images/safer-github-setup/Actions.png)
+![No one-size-fits-all for Actions](../images/safer-github-setup/actions.png)
 
 ## Codespaces - 🍩
 
