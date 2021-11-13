@@ -29,7 +29,7 @@ GitHub authentication differs to many SaaS products in one important way: accoun
 
 
 ### Require two-factor authentication for everyone in the organization 🍩
-![2FA Checkbox to Check ✅](./images/safer-github-setup/github_2fa.png)
+![2FA Checkbox to Check ✅](../images/safer-github-setup/github_2fa.png)
 
 The first thing you should do to your new GitHub organization is to enable two-factor authentication. Even if you plan to use Single Sign-On (SSO) with an identity provider that requires SSO, that will protect access to your organization, but 2FA is needed to protect the user account itself.
 
