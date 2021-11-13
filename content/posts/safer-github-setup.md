@@ -11,7 +11,7 @@ As a tech company, you're going to need to host and version control your source 
 
 This article covers the main controls to implement on GitHub - but you'll find that most of these have equivalents on platforms such as [GitLab](https://about.gitlab.com/) or [BitBucket](https://bitbucket.org/product). 
 
-This guide is meant for companies new to using GitHub, but the recommendations can be used for any organization using it.
+This guide is meant for companies new to using GitHub, but the recommendations can be used by any organization using it.
 
 ### Legend
 
@@ -51,15 +51,17 @@ id6(Work email)
 id7(Personal Projects)
 id3--notification-->id6
 id7--notification-->id5
-id1--Logs In with Account-->id2
+id1--Logs In-->id2
 id2-->Accesses-->id7
-id2--Links to work account-->id4
+id2--Links to work org-->id4
 id4--Accesses-->id3
 </div>
 
 That way, your corporate GitHub notifications  are accessible on work email, and GitHub sessions themselves, with SAML.
 
-The main downside of leveraging SSO on GitHub is that the price jumps from $4 per user/month to **$21**. They're not going to give up their ranking on [sso.tax](https://sso.tax/) soon.
+The main downside of leveraging SSO on GitHub is that the price jumps from $4 per user/month to **$21**. 
+
+They're not going to give up their ranking on [sso.tax](https://sso.tax/) soon.
 
 0. Go to the *Organization Security* settings page.
 1. Enable SSO ![Enable SSO to check ✅](../images/safer-github-setup/enablesso.png)
@@ -91,7 +93,7 @@ Under *‌Member repository permissions*, make sure you uncheck permissions for 
 
 > But what if I need people to be able to create repositories? I don't want to slow them down!
 
-That's what [automation](github_automation.md) is for!
+That's what [automation](./github_automation/) is for!
 
 ### Repository forking 🍩 
 By default, ensure public repositories are the only one that can be forked, by disabling this feature.
@@ -141,7 +143,7 @@ Ensure that regular members do not have the ability to create public pages, but 
 ### Admin Repository Permissions 
 These permissions apply to members that have admin privileges on repositories.
 
-It is important to limit admin privileges on repositories. These privileges are simply too high to grant to multiple people, as they allow disabling security features such as branch protection. Therefore, it is important to strive for repositories without administrators, except for service accounts used for [automation](github_automation.md).
+It is important to limit admin privileges on repositories. These privileges are simply too high to grant to multiple people, as they allow disabling security features such as branch protection. Therefore, it is important to strive for repositories without administrators, except for service accounts used for [automation](./github_automation/).
 
 That being said, these automation accounts might be attacked, and so, it is useful to limit the privileges being made available to those accounts.
 
@@ -156,7 +158,7 @@ Deletion and transfer can also be dangerous, as an attacker might attempt to tak
 
 
 #### Member team permissions 🌯
-Disable this to prevent members from creating teams, which should be managed through [automation](github_automation.md).
+Disable this to prevent members from creating teams, which should be managed through [automation](./github_automation/).
 
 ![Team creation permission to uncheck!](../images/safer-github-setup/team_creation.png)
 
@@ -176,27 +178,27 @@ I recommend that you simply enable all of them by default.
 
 ![Security & Analysis - check'em all! ✅✅✅!](../images/safer-github-setup/security_analysis.png)
 
-## Actions 🌯 to 🌶
-GitHub actions lets you build workflows directly in GitHub. It can be used as a full-fledged CI/CD, or for simpler tasks.
+## Actions -  🌯 to 🌶
+GitHub Actions lets you build workflows directly in GitHub. It can be used as a full-fledged CI/CD, or for simpler tasks.
 
 Actions, by definitions, are code that is executed with permission to interact with repositories. 
 
-If you do not use actions: block them all for now.
-If you do use actions, and require a high level of security, allow specific actions only.
+If you do not use Actions: block them all for now.
+If you do use Actions, and require a high level of security, allow specific Actions only.
 
-If you are in the middle, allow actions that are made by GitHub directly, as well as from [verified creators](https://github.com/marketplace?type=actions&verification=verified_creator).
+If you are in the middle, allow Actions that are made by GitHub directly, as well as from [verified creators](https://github.com/marketplace?type=Actions&verification=verified_creator).
 
-![No one-size-fits-all for Actions](../images/safer-github-setup/actions.png)
+![No one-size-fits-all for Actions](../images/safer-github-setup/Actions.png)
 
 ## Codespaces
 
-[Codespaces](https://github.com/features/codespaces) is essentially ML-powered autocomplete for developers. Its name is also real close to the [name of a company that closed after getting wrecked by an attack](https://www.csoonline.com/article/2365062/code-spaces-forced-to-close-its-doors-after-security-incident.html), but it is completely unrelated.
+[Codespaces](https://github.com/features/codespaces) is essentially a cloud based development environment powered by Visual Studio Code. Its name is also real close to the [name of a company that closed after getting wrecked by an attack](https://www.csoonline.com/article/2365062/code-spaces-forced-to-close-its-doors-after-security-incident.html), but it is completely unrelated.
 
-It is essentially a development environment in the cloud for your developers, available through a browser or the desktop version of Visual Studio Code.
+If you do not intend on using Codespaces, do not allow it, as the VMs it uses are relatively expensive. 
 
-If you do not intend on using them, do not allow them, as they are relatively expensive. But keep in mind they exist, especially if you start thinking of ways to allow developers to work in standardized environments without having too much control on their actual computers.
+Keep in mind that this feature exists, especially if you start thinking of ways to allow developers to work in standardized environments without having too much control on their actual computers.
 
 
-## Automating 🌶 this
+## Automating this - 🌶
 
-See [automation](github_automation.md)!
+See [automation](./github_automation/)!
