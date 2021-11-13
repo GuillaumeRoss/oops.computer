@@ -1,6 +1,6 @@
 ---
 title: "Automating"
-date: 2021-11-08T08:23:54-04:00
+date: 2021-11-13T13:23:54-04:00
 draft: false
 tag: ["GitHub, startup, basics, automation"]
 categories: ["Secure Startup"]
@@ -79,5 +79,4 @@ id6--Executes and applies-->id7
 id7-->id8
 id7-->id9
 id7-->id10-->id12
-{{</mermaid>}}
 </div>
