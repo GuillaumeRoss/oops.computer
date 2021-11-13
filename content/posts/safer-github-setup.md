@@ -28,13 +28,13 @@ Authentication is the lynchpin of security on SaaS applications such as GitHub.
 GitHub authentication differs to many SaaS products in one important way: accounts are global. Developers can and do carry their accounts from company to company and use them for open source projects.
 
 
-### Require two-factor authentication for everyone in the organization 🍩
+### Require two-factor authentication for everyone in the organization - 🍩
 ![2FA Checkbox to Check ✅](../images/safer-github-setup/github_2fa.png)
 
 The first thing you should do to your new GitHub organization is to enable two-factor authentication. Even if you plan to use Single Sign-On (SSO) with an identity provider that requires SSO, that will protect access to your organization, but 2FA is needed to protect the user account itself.
 
 
-### Single Sign-On (SSO) 🌯💰
+### Single Sign-On (SSO) - 🌯💰
 A question I hear frequently when companies are setting up their GitHub is 
 > Should we ask our employees to create new, work GitHub accounts?
 
@@ -70,7 +70,7 @@ They're not going to give up their ranking on [sso.tax](https://sso.tax/) soon.
 4. Verify your domain(s)
 5. Require that email notifications only be sent to approved or verified domains. ![Restrict email notifications check ✅](../images/safer-github-setup/restrictemail.png)
 
-### Administrator/Owner Privileges 🌯
+### Administrator/Owner Privileges - 🌯
 
 Keep administrator privileges to the absolute minimum. Keep in mind that anybody with owner privileges on your GitHub environment would be able to disable all the security controls discussed in this document - without being detected, unless you were using the [Audit API](https://docs.github.com/en/organizations/keeping-your-organization-secure/reviewing-the-audit-log-for-your-organization) with automated detection. 
 
@@ -81,11 +81,11 @@ Repositories are the main reason organizations use GitHub. If you're not going t
 
 There are many ways to protect repositories and the code they contain. This requires controlling who is able to create and configure the repositories, then, to have a standard configuration applied to them.
 
-### Member Repository Permissions 🌯
+### Member Repository Permissions - 🌯
 
 To keep control on the configuration of repositories, you must ensure GitHub owners are the only ones able to create them.
 
-### Repository Creation 🌯
+### Repository Creation - 🌯
 
 Under *‌Member repository permissions*, make sure you uncheck permissions for the creation of public and private repositories.
 
@@ -93,14 +93,14 @@ Under *‌Member repository permissions*, make sure you uncheck permissions for 
 
 > But what if I need people to be able to create repositories? I don't want to slow them down!
 
-That's what [automation](./github_automation/) is for!
+That's what [automation](../github_automation/) is for!
 
-### Repository forking 🍩 
+### Repository forking - 🍩 
 By default, ensure public repositories are the only one that can be forked, by disabling this feature.
 
 ![Repo forking to uncheck!](../images/safer-github-setup/repo_forking.png)
 
-### Repository Outside collaborators 🌯
+### Repository Outside collaborators - 🌯
 
 If you are using SAML, and are using that to enforce specific requirements on systems connecting to GitHub, you may want to enforce that outside collaborators not be allowed. Instead, invite consultants as regular users, but give them an account on your identity provider.
 
@@ -108,7 +108,7 @@ If you are using SAML, and are using that to enforce specific requirements on sy
 
 If you must collaborate with a lot of external consultants, and you do not apply specific security requirements to connecting to GitHub, then leaving this setting enabled makes sense.
 
-### Branch Protection 🍩 
+### Branch Protection - 🍩 
 
 Branch protection is one of the most important settings to configure, and the main reason you should not have members with administrative privileges on the repositories.
 
@@ -134,21 +134,21 @@ First, ensure branch protection is enabled on at least your default branch.
 Other values should be configured based on your use cases.
 
 ## Other Settings
-### Pages 🌯
+### Pages - 🌯
 
-Ensure that regular members do not have the ability to create public pages, but can create private ones. This can prevent the accidental publishing of internal documentation.
+Ensure that regular members do not have the ability to create public pages, but can create private ones. This can prevent the accidental publishing of internal documentation or other data.
 
 ![Public pages to uncheck!](../images/safer-github-setup/pages.png)
 
 ### Admin Repository Permissions 
 These permissions apply to members that have admin privileges on repositories.
 
-It is important to limit admin privileges on repositories. These privileges are simply too high to grant to multiple people, as they allow disabling security features such as branch protection. Therefore, it is important to strive for repositories without administrators, except for service accounts used for [automation](./github_automation/).
+It is important to limit admin privileges on repositories. These privileges are simply too high to grant to multiple people, as they allow disabling security features such as branch protection. Therefore, it is important to strive for repositories without administrators, except for service accounts used for [automation](../github_automation/).
 
 That being said, these automation accounts might be attacked, and so, it is useful to limit the privileges being made available to those accounts.
 
 
-#### Repository visibility, deletion and transfer 🌯
+#### Repository visibility, deletion and transfer - 🌯
 
 Visibility would allow a member to make a repository public, which could result in accidental or at least, unexpected public publishing of internal repositories.
 
@@ -157,19 +157,19 @@ Deletion and transfer can also be dangerous, as an attacker might attempt to tak
 ![Visibility change and repo deletion and transfer to uncheck!](../images/safer-github-setup/visibility_and_deletion.png)
 
 
-#### Member team permissions 🌯
-Disable this to prevent members from creating teams, which should be managed through [automation](./github_automation/).
+#### Member team permissions - 🌯
+Disable this to prevent members from creating teams, which should be managed through [automation](../github_automation/).
 
 ![Team creation permission to uncheck!](../images/safer-github-setup/team_creation.png)
 
-#### Member organization permissions 🍩 
+#### Member organization permissions - 🍩 
 
 Enable this to ensure everyone contributing on your repositories has access to security advisories related to dependencies of the code.
 
 ![Dependency insight to check ✅!](../images/safer-github-setup/dependency_insight.png)
 
 
-## Security & Analysis 🍩 
+## Security & Analysis - 🍩 
 Depending on your GitHub subscription level, and on your repositories being public or private, you will have access to various security and analysis tools. 
 
 I recommend that you simply enable all of them by default.
@@ -190,7 +190,7 @@ If you are in the middle, allow Actions that are made by GitHub directly, as wel
 
 ![No one-size-fits-all for Actions](../images/safer-github-setup/Actions.png)
 
-## Codespaces
+## Codespaces - 🍩
 
 [Codespaces](https://github.com/features/codespaces) is essentially a cloud based development environment powered by Visual Studio Code. Its name is also real close to the [name of a company that closed after getting wrecked by an attack](https://www.csoonline.com/article/2365062/code-spaces-forced-to-close-its-doors-after-security-incident.html), but it is completely unrelated.
 
