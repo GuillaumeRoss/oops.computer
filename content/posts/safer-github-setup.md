@@ -1,6 +1,6 @@
 ---
 title: "Safer GitHub Setup"
-date: 2021-11-03T013:20:54-04:00
+date: 2021-11-13T013:20:54-04:00
 draft: false
 tag: ["GitHub, startup, basics, week0"]
 categories: ["Secure Startup"]
