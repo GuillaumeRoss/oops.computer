@@ -7,7 +7,7 @@ categories: ["Secure Startup"]
 
 ---
 
-As a tech company, you're going to need to host and version control your source code. Unless you're super weird (or have crazy requirements), you're likely to use a SaaS platform such as GitHub to do so. 
+As a tech company, you need to host and version control your source code. Unless you're super weird (or have crazy requirements), you're likely to use a SaaS platform such as GitHub.
 
 This article covers the main controls to implement on GitHub - but you'll find that most of these have equivalents on platforms such as [GitLab](https://about.gitlab.com/) or [BitBucket](https://bitbucket.org/product). 
 
@@ -35,10 +35,10 @@ The first thing you should do to your new GitHub organization is to enable two-f
 
 
 ### Single Sign-On (SSO) - 🌯💰
-A question I hear frequently when companies are setting up their GitHub is 
+A question I am frequently asked when companies are setting up their GitHub is 
 > Should we ask our employees to create new, work GitHub accounts?
 
-The answer to that is almost always **no**, due to a simple feature. If the goal is to make sure data does not get leaked to personal GitHub accounts, it is much easier to **use SSO authentication** for access to the organization, and require an email **on your corporate domain** for notifications related to your projects.
+The answer to that is almost always **no**, due to a simple feature. If the goal is to make sure data does not get leaked to personal GitHub accounts, it is much easier to **use SSO authentication** for access to the organization and require an email **on your corporate domain** for notifications related to your projects.
 
 <div class="mermaid">
 graph LR;
@@ -57,7 +57,7 @@ id2--Links to work org-->id4
 id4--Accesses-->id3
 </div>
 
-That way, your corporate GitHub notifications  are accessible on work email, and GitHub sessions themselves, with SAML.
+That way, corporate GitHub notifications are accessible on corporate email, and GitHub sessions are protected with SAML.
 
 The main downside of leveraging SSO on GitHub is that the price jumps from $4 per user/month to **$21**. 
 
@@ -74,20 +74,21 @@ They're not going to give up their ranking on [sso.tax](https://sso.tax/) soon.
 
 Keep administrator privileges to the absolute minimum. Keep in mind that anybody with owner privileges on your GitHub environment would be able to disable all the security controls discussed in this document - without being detected, unless you were using the [Audit API](https://docs.github.com/en/organizations/keeping-your-organization-secure/reviewing-the-audit-log-for-your-organization) with automated detection. 
 
-Make sure two people are able to get to owner privileges, but no more. As you increase your security and consider becoming compliant with various frameworks, you might even have to restrict that even more, by splitting passwords and 2FA credentials between different people.
+Make sure two people can get to owner privileges, but no more.
 
 ## Repositories
 Repositories are the main reason organizations use GitHub. If you're not going to create them, why bother?
 
-There are many ways to protect repositories and the code they contain. This requires controlling who is able to create and configure the repositories, then, to have a standard configuration applied to them.
+There are many ways to protect repositories and the code they contain. Controlling who can create
+and configure repositories is needed to limit sprawl and configuration drift.
 
 ### Member Repository Permissions - 🌯
 
-To keep control on the configuration of repositories, you must ensure GitHub owners are the only ones able to create them.
+Ensure GitHub owners are the only ones able to create repositories.
 
 ### Repository Creation - 🌯
 
-Under *‌Member repository permissions*, make sure you uncheck permissions for the creation of public and private repositories.
+Under *‌Member repository permissions*, make sure you uncheck permissions allowing the creation of public and private repositories.
 
 ![Repo creation permissions to uncheck!](../images/safer-github-setup/repo_creation.png)
 
@@ -102,11 +103,11 @@ By default, ensure public repositories are the only one that can be forked, by d
 
 ### Repository Outside collaborators - 🌯
 
-If you are using SAML, and are using that to enforce specific requirements on systems connecting to GitHub, you may want to enforce that outside collaborators not be allowed. Instead, invite consultants as regular users, but give them an account on your identity provider.
+If you are using SAML, and are using that to enforce specific requirements on systems connecting to
+GitHub, disallow external collaborators. Instead, invite consultants as regular users, but give them an account on your
+identity provider.
 
 ![Outside collaborators to uncheck!](../images/safer-github-setup/outside_collaborators.png)
-
-If you must collaborate with a lot of external consultants, and you do not apply specific security requirements to connecting to GitHub, then leaving this setting enabled makes sense.
 
 ### Branch Protection - 🍩 
 
