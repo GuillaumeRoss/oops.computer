@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Oops.🖥</title><link>https://oops.computer/</link><description>MemE is a powerful and highly customizable GoHugo theme for personal blogs.</description><generator>Hugo 0.85.0 https://gohugo.io/</generator><language>en</language><managingEditor>guillaume@binaryfactory.ca (Guillaume Ross)</managingEditor><webMaster>guillaume@binaryfactory.ca (Guillaume Ross)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Sat, 13 Nov 2021 19:00:06 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://oops.computer/rss.xml"/><item><title>Automating GitHub</title><link>https://oops.computer/posts/github_automation/</link><guid isPermaLink="true">https://oops.computer/posts/github_automation/</guid><pubDate>Sat, 13 Nov 2021 13:23:54 -0400</pubDate><author>guillaume@binaryfactory.ca (Guillaume Ross)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description>&lt;p>In &lt;a href="../safer-github-setup/">Safer GitHub Setup&lt;/a>, we restricted access to multiple operations in GitHub:&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Oops.🖥</title><link>https://oops.computer/</link><description>MemE is a powerful and highly customizable GoHugo theme for personal blogs.</description><generator>Hugo 0.85.0 https://gohugo.io/</generator><language>en</language><managingEditor>guillaume@binaryfactory.ca (Guillaume Ross)</managingEditor><webMaster>guillaume@binaryfactory.ca (Guillaume Ross)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Tue, 22 Mar 2022 15:05:41 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://oops.computer/rss.xml"/><item><title>Automating GitHub</title><link>https://oops.computer/posts/github_automation/</link><guid isPermaLink="true">https://oops.computer/posts/github_automation/</guid><pubDate>Sat, 13 Nov 2021 13:23:54 -0400</pubDate><author>guillaume@binaryfactory.ca (Guillaume Ross)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description>&lt;p>In &lt;a href="../safer-github-setup/">Safer GitHub Setup&lt;/a>, we restricted access to multiple operations in GitHub:&lt;/p>
 &lt;ul>
 &lt;li>Creating users can be done by owners, and we have few of those.&lt;/li>
 &lt;li>Managing teams also requires owners privileges.&lt;/li>
@@ -64,7 +64,7 @@ id6--Executes and applies-->id7
 id7-->id8
 id7-->id9
 id7-->id10-->id12
-&lt;/div></description><category domain="https://oops.computer/categories/secure-startup/">Secure Startup</category></item><item><title>Safer GitHub Setup</title><link>https://oops.computer/posts/safer-github-setup/</link><guid isPermaLink="true">https://oops.computer/posts/safer-github-setup/</guid><pubDate>Sat, 13 Nov 2021 13:21:54 -0400</pubDate><author>guillaume@binaryfactory.ca (Guillaume Ross)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description>&lt;p>As a tech company, you&amp;rsquo;re going to need to host and version control your source code. Unless you&amp;rsquo;re super weird (or have crazy requirements), you&amp;rsquo;re likely to use a SaaS platform such as GitHub to do so.&lt;/p>
+&lt;/div></description><category domain="https://oops.computer/categories/secure-startup/">Secure Startup</category></item><item><title>Safer GitHub Setup</title><link>https://oops.computer/posts/safer-github-setup/</link><guid isPermaLink="true">https://oops.computer/posts/safer-github-setup/</guid><pubDate>Sat, 13 Nov 2021 13:21:54 -0400</pubDate><author>guillaume@binaryfactory.ca (Guillaume Ross)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description>&lt;p>As a tech company, you need to host and version control your source code. Unless you&amp;rsquo;re super weird (or have crazy requirements), you&amp;rsquo;re likely to use a SaaS platform such as GitHub.&lt;/p>
 &lt;p>This article covers the main controls to implement on GitHub - but you&amp;rsquo;ll find that most of these have equivalents on platforms such as &lt;a href="https://about.gitlab.com/">GitLab&lt;/a> or &lt;a href="https://bitbucket.org/product">BitBucket&lt;/a>.&lt;/p>
 &lt;p>This guide is meant for companies new to using GitHub, but the recommendations can be used by any organization using it.&lt;/p>
 &lt;h3 id="legend">Legend&lt;/h3>
@@ -101,11 +101,11 @@ id7-->id10-->id12
 &lt;p>&lt;img src="../images/safer-github-setup/github_2fa.png" alt="2FA Checkbox to Check ✅">&lt;/p>
 &lt;p>The first thing you should do to your new GitHub organization is to enable two-factor authentication. Even if you plan to use Single Sign-On (SSO) with an identity provider that requires SSO, that will protect access to your organization, but 2FA is needed to protect the user account itself.&lt;/p>
 &lt;h3 id="single-sign-on-sso---">Single Sign-On (SSO) - 🌯💰&lt;/h3>
-&lt;p>A question I hear frequently when companies are setting up their GitHub is&lt;/p>
+&lt;p>A question I am frequently asked when companies are setting up their GitHub is&lt;/p>
 &lt;blockquote>
 &lt;p>Should we ask our employees to create new, work GitHub accounts?&lt;/p>
 &lt;/blockquote>
-&lt;p>The answer to that is almost always &lt;strong>no&lt;/strong>, due to a simple feature. If the goal is to make sure data does not get leaked to personal GitHub accounts, it is much easier to &lt;strong>use SSO authentication&lt;/strong> for access to the organization, and require an email &lt;strong>on your corporate domain&lt;/strong> for notifications related to your projects.&lt;/p>
+&lt;p>The answer to that is almost always &lt;strong>no&lt;/strong>, due to a simple feature. If the goal is to make sure data does not get leaked to personal GitHub accounts, it is much easier to &lt;strong>use SSO authentication&lt;/strong> for access to the organization and require an email &lt;strong>on your corporate domain&lt;/strong> for notifications related to your projects.&lt;/p>
 &lt;div class="mermaid">
 graph LR;
 id1(User)
@@ -122,7 +122,7 @@ id2-->Accesses-->id7
 id2--Links to work org-->id4
 id4--Accesses-->id3
 &lt;/div>
-&lt;p>That way, your corporate GitHub notifications are accessible on work email, and GitHub sessions themselves, with SAML.&lt;/p>
+&lt;p>That way, corporate GitHub notifications are accessible on corporate email, and GitHub sessions are protected with SAML.&lt;/p>
 &lt;p>The main downside of leveraging SSO on GitHub is that the price jumps from $4 per user/month to &lt;strong>$21&lt;/strong>.&lt;/p>
 &lt;p>They&amp;rsquo;re not going to give up their ranking on &lt;a href="https://sso.tax/">sso.tax&lt;/a> soon.&lt;/p>
 &lt;ol start="0">
@@ -135,14 +135,15 @@ id4--Accesses-->id3
 &lt;/ol>
 &lt;h3 id="administratorowner-privileges---">Administrator/Owner Privileges - 🌯&lt;/h3>
 &lt;p>Keep administrator privileges to the absolute minimum. Keep in mind that anybody with owner privileges on your GitHub environment would be able to disable all the security controls discussed in this document - without being detected, unless you were using the &lt;a href="https://docs.github.com/en/organizations/keeping-your-organization-secure/reviewing-the-audit-log-for-your-organization">Audit API&lt;/a> with automated detection.&lt;/p>
-&lt;p>Make sure two people are able to get to owner privileges, but no more. As you increase your security and consider becoming compliant with various frameworks, you might even have to restrict that even more, by splitting passwords and 2FA credentials between different people.&lt;/p>
+&lt;p>Make sure two people can get to owner privileges, but no more.&lt;/p>
 &lt;h2 id="repositories">Repositories&lt;/h2>
 &lt;p>Repositories are the main reason organizations use GitHub. If you&amp;rsquo;re not going to create them, why bother?&lt;/p>
-&lt;p>There are many ways to protect repositories and the code they contain. This requires controlling who is able to create and configure the repositories, then, to have a standard configuration applied to them.&lt;/p>
+&lt;p>There are many ways to protect repositories and the code they contain. Controlling who can create
+and configure repositories is needed to limit sprawl and configuration drift.&lt;/p>
 &lt;h3 id="member-repository-permissions---">Member Repository Permissions - 🌯&lt;/h3>
-&lt;p>To keep control on the configuration of repositories, you must ensure GitHub owners are the only ones able to create them.&lt;/p>
+&lt;p>Ensure GitHub owners are the only ones able to create repositories.&lt;/p>
 &lt;h3 id="repository-creation---">Repository Creation - 🌯&lt;/h3>
-&lt;p>Under &lt;em>‌Member repository permissions&lt;/em>, make sure you uncheck permissions for the creation of public and private repositories.&lt;/p>
+&lt;p>Under &lt;em>‌Member repository permissions&lt;/em>, make sure you uncheck permissions allowing the creation of public and private repositories.&lt;/p>
 &lt;p>&lt;img src="../images/safer-github-setup/repo_creation.png" alt="Repo creation permissions to uncheck!">&lt;/p>
 &lt;blockquote>
 &lt;p>But what if I need people to be able to create repositories? I don&amp;rsquo;t want to slow them down!&lt;/p>
@@ -152,9 +153,10 @@ id4--Accesses-->id3
 &lt;p>By default, ensure public repositories are the only one that can be forked, by disabling this feature.&lt;/p>
 &lt;p>&lt;img src="../images/safer-github-setup/repo_forking.png" alt="Repo forking to uncheck!">&lt;/p>
 &lt;h3 id="repository-outside-collaborators---">Repository Outside collaborators - 🌯&lt;/h3>
-&lt;p>If you are using SAML, and are using that to enforce specific requirements on systems connecting to GitHub, you may want to enforce that outside collaborators not be allowed. Instead, invite consultants as regular users, but give them an account on your identity provider.&lt;/p>
+&lt;p>If you are using SAML, and are using that to enforce specific requirements on systems connecting to
+GitHub, disallow external collaborators. Instead, invite consultants as regular users, but give them an account on your
+identity provider.&lt;/p>
 &lt;p>&lt;img src="../images/safer-github-setup/outside_collaborators.png" alt="Outside collaborators to uncheck!">&lt;/p>
-&lt;p>If you must collaborate with a lot of external consultants, and you do not apply specific security requirements to connecting to GitHub, then leaving this setting enabled makes sense.&lt;/p>
 &lt;h3 id="branch-protection---">Branch Protection - 🍩&lt;/h3>
 &lt;p>Branch protection is one of the most important settings to configure, and the main reason you should not have members with administrative privileges on the repositories.&lt;/p>
 &lt;p>Located in the &lt;strong>Branches&lt;/strong> section of repository settings, you must create branch.&lt;/p>
